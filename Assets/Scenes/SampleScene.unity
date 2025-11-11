@@ -955,7 +955,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Op\xF3r powietrza: 0 N\n"
+  m_text: "Op\xF3r powietrza: 0,00 N\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1227,6 +1227,10 @@ MonoBehaviour:
   rotateSpeed: 8
   smoothFollow: 0
   smoothRotate: 1
+  zoomSpeed: 0.5
+  minZoomDistance: 5
+  maxZoomDistance: 30
+  invertScroll: 0
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -2671,7 +2675,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Pr\u0119dko\u015B\u0107: 0 m/s\n"
+  m_text: "Pr\u0119dko\u015B\u0107: 0,00 m/s\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

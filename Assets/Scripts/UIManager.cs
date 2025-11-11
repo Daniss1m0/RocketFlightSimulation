@@ -61,18 +61,18 @@ public class UIManager : MonoBehaviour
     {
         if (rocket == null)
         {
-            statusText.text = "Brak rakiety";
             speedText.text = "-";
             thrustText.text = "-";
             dragText.text = "-";
             heightText.text = "-";
+            statusText.text = "Brak rakiety";
             return;
         }
 
-        statusText.text = rocket.GetStatus();
-        speedText.text = Mathf.Abs(rocket.velocity).ToString("F2") + " m/s";
-        thrustText.text = rocket.thrust.ToString("F0") + " N";
-        dragText.text = Mathf.Abs(rocket.dragForce).ToString("F2") + " N";
-        heightText.text = rocket.transform.position.y.ToString("F2") + " m";
+        speedText.text = "Prędkość: " + Mathf.Abs(rocket.velocity).ToString("F2") + " m/s";
+        thrustText.text = "Siła ciągu: " + rocket.thrust.ToString("F0") + " N";
+        dragText.text = "Opór powietrza: " + Mathf.Abs(rocket.dragForce).ToString("F2") + " N";
+        heightText.text = "Wysokość: " + rocket.transform.position.y.ToString("F2") + " m";
+        statusText.text = "Status: „" + rocket.GetStatus() + "\"";
     }
 }

@@ -25,7 +25,7 @@ public class RocketController : MonoBehaviour
         transform.position = new Vector3(transform.position.x, 2.5f, transform.position.z);
         if (uiManager == null)
         {
-            uiManager = FindObjectOfType<UIManager>();
+            uiManager = FindFirstObjectByType<UIManager>();
             if (uiManager != null && uiManager.rocket == null) uiManager.rocket = this;
         }
         parts = GetComponentsInChildren<DetachablePart>(true);
