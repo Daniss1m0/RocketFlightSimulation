@@ -20,6 +20,8 @@ public class UIManager : MonoBehaviour
 
     public RocketController rocket;
 
+    private float densitySliderMultiplier = 0.0001f;
+
     void Start()
     {
         if (airResistanceSlider != null) airResistanceSlider.minValue = 0f; airResistanceSlider.maxValue = 2f;
@@ -30,7 +32,7 @@ public class UIManager : MonoBehaviour
         if (rocket != null && rocket.uiManager == null) rocket.uiManager = this;
 
         if (airResistanceSlider != null)
-            airResistanceSlider.onValueChanged.AddListener(value => { if (rocket != null) rocket.dragCoefficient = value; UpdateUI(); });
+            airResistanceSlider.onValueChanged.AddListener(value => { if (rocket != null) rocket.airDensity = value*densitySliderMultiplier; UpdateUI(); });
 
         if (thrustSlider != null)
             thrustSlider.onValueChanged.AddListener(value => { if (rocket != null) rocket.thrust = value; UpdateUI(); });
@@ -44,7 +46,7 @@ public class UIManager : MonoBehaviour
 
         if (rocket != null)
         {
-            if (airResistanceSlider != null) rocket.dragCoefficient = airResistanceSlider.value;
+            if (airResistanceSlider != null) rocket.airDensity = airResistanceSlider.value*densitySliderMultiplier;
             if (thrustSlider != null) rocket.thrust = thrustSlider.value;
             if (gravitySlider != null) rocket.gravity = gravitySlider.value;
         }

@@ -22,7 +22,7 @@ public class RocketController : MonoBehaviour
 
     void Start()
     {
-        transform.position = new Vector3(transform.position.x, 2.5f, transform.position.z);
+        transform.position = new Vector3(transform.position.x, 0.0f, transform.position.z);
         if (uiManager == null)
         {
             uiManager = FindFirstObjectByType<UIManager>();
